@@ -15,8 +15,6 @@ authors = [
 dynamic = ["version"]
 keywords = ["data"]
 classifiers = [
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
@@ -29,12 +27,11 @@ homepage = "https://github.com/machow/ddispatch"
 
 [project.optional-dependencies]
 dev = [
-    "pip-tools",
     "pytest"
 ]
 
 [tool.pytest.ini_options]
-testpaths = ["databackend"]
+testpaths = ["ddispatch"]
 addopts = "--doctest-modules"
 doctest_optionflags = "NORMALIZE_WHITESPACE"
 
