@@ -70,6 +70,10 @@ jobs:
     uses: ./.github/workflows/_preview.yml
     with:
       artifact-name: "docs"
+    secrets:
+      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      NETLIFY_SITE_NAME: ${{ secrets.NETLIFY_SITE_NAME }}
 
   release-pypi:
     name: "Release to PyPI"

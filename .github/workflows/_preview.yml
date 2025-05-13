@@ -8,6 +8,16 @@ on:
         description: "The name of the artifact to download"
         type: string
         required: true
+    secrets:
+      NETLIFY_SITE_ID:
+        description: "Netlify site ID"
+        required: true
+      NETLIFY_AUTH_TOKEN:
+        description: "Netlify auth token"
+        required: true
+      NETLIFY_SITE_NAME:
+        description: "Netlify site name"
+        required: true
 
 jobs:
   release-docs-preview:
