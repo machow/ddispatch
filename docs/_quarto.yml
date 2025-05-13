@@ -22,6 +22,7 @@ website:
     - text: Guide
       contents:
         - guide/overview.qmd
+    - id: dummy
 
 # tell quarto to read the generated styles
 format:
