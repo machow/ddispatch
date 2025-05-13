@@ -5,6 +5,9 @@ project:
 metadata-files:
   - reference/_sidebar.yml
 
+interlinks:
+  fast: true
+
 website: 
   title: ddispatch
   navbar:
