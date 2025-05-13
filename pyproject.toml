@@ -20,7 +20,7 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12"
 ]
-requires-python = ">=3.7"
+requires-python = ">=3.9"
 
 [project.urls]
 homepage = "https://github.com/machow/ddispatch"
@@ -28,6 +28,14 @@ homepage = "https://github.com/machow/ddispatch"
 [project.optional-dependencies]
 dev = [
     "pytest"
+]
+
+[dependency-groups]
+dev = [
+    "griffe>=1.7.2",
+    "jupyter>=1.1.1",
+    "pyyaml>=6.0.2",
+    "quartodoc>=0.9.1",
 ]
 
 [tool.pytest.ini_options]
