@@ -55,7 +55,7 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
       - name: Build docs
         run: |
-          make docs-build
+          cd docs && quarto render
 
       # save ----
       - name: Save docs artifact
