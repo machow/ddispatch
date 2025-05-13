@@ -387,7 +387,7 @@ wheels = [
 
 [[package]]
 name = "ddispatch"
-version = "0.1.dev9+gd787a11.d20250513"
+version = "0.1.dev12+g974ce86.d20250513"
 source = { editable = "." }
 
 [package.optional-dependencies]
@@ -399,6 +399,7 @@ dev = [
 dev = [
     { name = "griffe" },
     { name = "jupyter" },
+    { name = "pyyaml" },
     { name = "quartodoc" },
 ]
 
@@ -409,6 +410,7 @@ requires-dist = [{ name = "pytest", marker = "extra == 'dev'" }]
 dev = [
     { name = "griffe", specifier = ">=1.7.2" },
     { name = "jupyter", specifier = ">=1.1.1" },
+    { name = "pyyaml", specifier = ">=6.0.2" },
     { name = "quartodoc", specifier = ">=0.9.1" },
 ]
 
