@@ -37,6 +37,7 @@ else:
         outer = crnt.f_back
 
         if f.__name__ not in outer.f_locals:
+            # no generic function found, so create a new one
             generic = singledispatch(f)
             generic._is_singledispatch = True
 
@@ -54,6 +55,9 @@ else:
                 )
 
             generic.register(f)
+
+            if generic.__doc__ is None and f.__doc__ is not None:
+                generic.__doc__ = f.__doc__
 
             return generic
 

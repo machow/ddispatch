@@ -34,6 +34,7 @@ dev = [
 dev = [
     "griffe>=1.7.2",
     "jupyter>=1.1.1",
+    "pytest>=8.3.5",
     "pyyaml>=6.0.2",
     "quartodoc>=0.9.1",
 ]
