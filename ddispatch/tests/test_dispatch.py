@@ -81,3 +81,16 @@ def test_dispatch_on_abc():
 
     with pytest.raises(TypeError) as exc_info:
         f("a")
+
+
+def test_dispatch_uses_final_docstring():
+    @dispatch
+    def f(x: int) -> int:
+        return x + 1
+
+    @dispatch
+    def f(x: str) -> str:
+        """This is the final docstring."""
+        return x * 2
+
+    assert f.__doc__ == "This is the final docstring."
