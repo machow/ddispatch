@@ -94,3 +94,13 @@ def test_dispatch_uses_final_docstring():
         return x * 2
 
     assert f.__doc__ == "This is the final docstring."
+
+def test_dispatch_not_impl():
+    @dispatch
+    def f(x: int) -> int:
+        return x + 1
+
+    with pytest.raises(TypeError) as exc_info:
+        f(1.0, 2, z=3)
+
+    assert str(exc_info.value) == "No dispatch implementation for type: <class 'float'>"

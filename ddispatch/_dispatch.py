@@ -62,5 +62,5 @@ else:
             return generic
 
 
-def _raise_not_implemented(dispatch_on):
+def _raise_not_implemented(dispatch_on, *args, **kwargs):
     raise TypeError(f"No dispatch implementation for type: {type(dispatch_on)}")
